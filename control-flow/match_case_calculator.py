@@ -3,17 +3,18 @@ num2 = int(input("Enter the second number: "))
 operator = input("Choose the operation (+, -, *, /): ")
 
 match operator:
-    case "+":  # ✅ plain case
-        print(f"The result is {num1 + num2}")
-    case "-":  # ✅ plain case
-        print(f"The result is {num1 - num2}")
-    case "*":  # ✅ plain case
-        print(f"The result is {num1 * num2}")
-    case "/":
+    case "+":  # Addition
+        print("The result is:", num1 + num2)
+    case "-":  # Subtraction
+        print("The result is:", num1 - num2)
+    case "*":  # Multiplication
+        print("The result is:", num1 * num2)
+    case "/":  # Division
         if num2 != 0:
-            print(f"The result is {num1 / num2}")
+            print("The result is:", num1 / num2)
         else:
             print("Cannot divide by zero")
-    case _:  # fallback
-        print("Invalid operator")
+    case _:  # Default
+        print("Invalid operator entered.")
+
 
